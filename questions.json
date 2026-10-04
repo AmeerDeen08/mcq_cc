@@ -1,0 +1,2278 @@
+{
+  "topics": [
+    {
+      "name": "Partition List",
+      "questions": [
+        {
+          "id": 1,
+          "q": "What is the main goal of the Partition List problem?",
+          "options": [
+            "A. Sort all nodes in ascending order",
+            "B. Put nodes `< x` before nodes `>= x` while preserving relative order within each group",
+            "C. Remove all nodes greater than `x`",
+            "D. Reverse the linked list"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 2,
+          "q": "For `[1,4,3,2,5,2]` with `x = 3`, what is the expected result?",
+          "options": [
+            "A. `[1,2,2,4,3,5]`",
+            "B. `[1,2,3,4,5,2]`",
+            "C. `[4,3,5,1,2,2]`",
+            "D. `[2,2,1,4,3,5]`"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 3,
+          "q": "What property must be preserved inside each partition?",
+          "options": [
+            "A. Sorted order",
+            "B. Reverse order",
+            "C. Original relative order",
+            "D. Numerical distance from `x`"
+          ],
+          "answer": "C"
+        },
+        {
+          "id": 4,
+          "q": "Why are two dummy nodes useful in the efficient approach?",
+          "options": [
+            "A. They sort the list",
+            "B. They act as starting anchors for the smaller and greater/equal lists",
+            "C. They reduce the number of nodes",
+            "D. They store copies of every value"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 5,
+          "q": "Which nodes belong in the first partition when the pivot is `x`?",
+          "options": [
+            "A. Values `<= x`",
+            "B. Values `> x`",
+            "C. Values `< x`",
+            "D. Values equal to `x` only"
+          ],
+          "answer": "C"
+        },
+        {
+          "id": 6,
+          "q": "Which nodes belong in the second partition?",
+          "options": [
+            "A. Values `>= x`",
+            "B. Values `> x` only",
+            "C. Values `< x`",
+            "D. Values equal to zero"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 7,
+          "q": "In a pointer-based partition solution, what is rearranged?",
+          "options": [
+            "A. Node values only",
+            "B. Array indexes",
+            "C. Links/pointers between nodes",
+            "D. The pivot value"
+          ],
+          "answer": "C"
+        },
+        {
+          "id": 8,
+          "q": "What is the typical time complexity of traversing the list once for partitioning?",
+          "options": [
+            "A. O(1)",
+            "B. O(log n)",
+            "C. O(n)",
+            "D. O(n²)"
+          ],
+          "answer": "C"
+        },
+        {
+          "id": 9,
+          "q": "What is the purpose of setting the final greater-list node's `next` to `null`?",
+          "options": [
+            "A. To reverse the list",
+            "B. To prevent an unwanted old link/cycle",
+            "C. To delete the greater list",
+            "D. To make the list sorted"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 10,
+          "q": "Why is changing node values generally not the intended solution?",
+          "options": [
+            "A. It always causes O(n²) time",
+            "B. The problem focuses on pointer manipulation while preserving node order",
+            "C. Java does not allow value changes",
+            "D. Dummy nodes cannot be used otherwise"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 11,
+          "q": "If every node is less than `x`, what should the partition operation do?",
+          "options": [
+            "A. Delete all nodes",
+            "B. Put all nodes in the greater list",
+            "C. Keep the original list order",
+            "D. Reverse the list"
+          ],
+          "answer": "C"
+        },
+        {
+          "id": 12,
+          "q": "What is the main skill tested by Partition List?",
+          "options": [
+            "A. Hashing",
+            "B. Pointer manipulation in linked lists",
+            "C. Binary search",
+            "D. Dynamic programming"
+          ],
+          "answer": "B"
+        }
+      ]
+    },
+    {
+      "name": "Add Two Numbers",
+      "questions": [
+        {
+          "id": 13,
+          "q": "What does the Add Two Numbers linked-list problem represent?",
+          "options": [
+            "A. Two strings being concatenated",
+            "B. Two numbers represented using linked lists",
+            "C. Two binary trees",
+            "D. Two stacks"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 14,
+          "q": "Why is `carry` required?",
+          "options": [
+            "A. To reverse the lists",
+            "B. To store overflow from one digit position for the next position",
+            "C. To count nodes",
+            "D. To detect duplicates"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 15,
+          "q": "If the digit sum is 17, what are the digit and carry?",
+          "options": [
+            "A. Digit 17, carry 0",
+            "B. Digit 7, carry 1",
+            "C. Digit 1, carry 7",
+            "D. Digit 8, carry 1"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 16,
+          "q": "Which condition correctly keeps processing while a result digit may still exist?",
+          "options": [
+            "A. `l1 != null && l2 != null` only",
+            "B. `l1 != null || l2 != null || carry != 0`",
+            "C. `carry == 0`",
+            "D. `l1 == null && l2 == null`"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 17,
+          "q": "What is the purpose of a dummy node in the result list?",
+          "options": [
+            "A. It stores the final carry",
+            "B. It simplifies construction of the result list and provides an anchor",
+            "C. It reverses the result",
+            "D. It stores the larger input"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 18,
+          "q": "In the reverse-add-reverse approach, what is done first?",
+          "options": [
+            "A. Add the heads directly",
+            "B. Reverse both linked lists",
+            "C. Delete the first node",
+            "D. Sort both lists"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 19,
+          "q": "Why are the lists reversed in the reverse-add-reverse method?",
+          "options": [
+            "A. To make the most significant digit first",
+            "B. To make the least significant digits available first for addition",
+            "C. To save memory",
+            "D. To remove carry"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 20,
+          "q": "If `sum = 23`, what is `sum % 10`?",
+          "options": [
+            "A. 1",
+            "B. 2",
+            "C. 3",
+            "D. 23"
+          ],
+          "answer": "C"
+        },
+        {
+          "id": 21,
+          "q": "If `sum = 23`, what is integer `sum / 10`?",
+          "options": [
+            "A. 0",
+            "B. 1",
+            "C. 2",
+            "D. 3"
+          ],
+          "answer": "C"
+        },
+        {
+          "id": 22,
+          "q": "What should happen if both input lists are exhausted but `carry` is 1?",
+          "options": [
+            "A. Ignore it",
+            "B. Add a final node containing 1",
+            "C. Reverse the answer",
+            "D. Return null"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 23,
+          "q": "What is the time complexity of a linear linked-list addition solution?",
+          "options": [
+            "A. O(1)",
+            "B. O(log n)",
+            "C. O(n)",
+            "D. O(n²)"
+          ],
+          "answer": "C"
+        },
+        {
+          "id": 24,
+          "q": "In the uploaded reverse-add-reverse approach, what extra working variables are used instead of an auxiliary data structure?",
+          "options": [
+            "A. `prev`, `curr`, `next`, `carry`",
+            "B. HashMap and Set",
+            "C. Two queues",
+            "D. Binary tree nodes"
+          ],
+          "answer": "A"
+        }
+      ]
+    },
+    {
+      "name": "Minimum Stack",
+      "questions": [
+        {
+          "id": 25,
+          "q": "What extra operation does a Minimum Stack provide?",
+          "options": [
+            "A. `sort()`",
+            "B. `getMin()`",
+            "C. `reverse()`",
+            "D. `search()`"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 26,
+          "q": "What time complexity is required for `push`, `pop`, `top`, and `getMin`?",
+          "options": [
+            "A. O(n)",
+            "B. O(log n)",
+            "C. O(1)",
+            "D. O(n log n)"
+          ],
+          "answer": "C"
+        },
+        {
+          "id": 27,
+          "q": "What is the purpose of `minStack`?",
+          "options": [
+            "A. Store only maximum values",
+            "B. Track minimum values efficiently",
+            "C. Reverse the main stack",
+            "D. Store input indexes only"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 28,
+          "q": "When should an element be pushed into `minStack` in the two-stack approach?",
+          "options": [
+            "A. Only when it is greater than the current minimum",
+            "B. When `minStack` is empty or `x <= minStack.peek()`",
+            "C. Only when it is positive",
+            "D. Every second push"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 29,
+          "q": "Why is `<=` used rather than only `<` when pushing into `minStack`?",
+          "options": [
+            "A. To preserve duplicate minimum values",
+            "B. To make pop O(n)",
+            "C. To remove duplicates",
+            "D. To sort the stack"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 30,
+          "q": "Suppose the stack contains `[5,2,2]`. If one `2` is popped, what should the minimum remain?",
+          "options": [
+            "A. 5",
+            "B. 2",
+            "C. 0",
+            "D. Undefined"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 31,
+          "q": "When is the minimum stack popped?",
+          "options": [
+            "A. Whenever any element is popped",
+            "B. When the removed main-stack element equals `minStack.peek()`",
+            "C. Only when the removed element is positive",
+            "D. Never"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 32,
+          "q": "What would happen if duplicate minimum values were not stored in `minStack`?",
+          "options": [
+            "A. `push()` becomes O(n)",
+            "B. The minimum could be lost too early after a pop",
+            "C. The stack becomes sorted",
+            "D. `top()` fails"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 33,
+          "q": "What does `top()` return?",
+          "options": [
+            "A. Minimum element",
+            "B. Bottom element",
+            "C. Current top element",
+            "D. Maximum element"
+          ],
+          "answer": "C"
+        },
+        {
+          "id": 34,
+          "q": "Why is scanning the normal stack to find the minimum inefficient?",
+          "options": [
+            "A. It requires O(n) time",
+            "B. It requires O(log n) time",
+            "C. It changes the stack",
+            "D. It cannot compare integers"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 35,
+          "q": "What is the worst-case auxiliary space of the two-stack Minimum Stack?",
+          "options": [
+            "A. O(1)",
+            "B. O(log n)",
+            "C. O(n)",
+            "D. O(n²)"
+          ],
+          "answer": "C"
+        },
+        {
+          "id": 36,
+          "q": "If the operations are `push(100), push(80), push(120), getMin()`, what is returned?",
+          "options": [
+            "A. 120",
+            "B. 100",
+            "C. 80",
+            "D. 300"
+          ],
+          "answer": "C"
+        }
+      ]
+    },
+    {
+      "name": "Valid Parentheses",
+      "questions": [
+        {
+          "id": 37,
+          "q": "Which data structure is naturally suited for matching nested brackets?",
+          "options": [
+            "A. Queue",
+            "B. Stack",
+            "C. Heap",
+            "D. Graph"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 38,
+          "q": "Why is a stack appropriate for Valid Parentheses?",
+          "options": [
+            "A. It follows FIFO",
+            "B. It follows LIFO, matching the most recently opened bracket",
+            "C. It sorts brackets",
+            "D. It removes duplicates"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 39,
+          "q": "Which set of symbols is handled by the problem?",
+          "options": [
+            "A. `()`, `{}`, `[]`",
+            "B. `< >` only",
+            "C. Numbers only",
+            "D. Letters only"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 40,
+          "q": "What should happen when an opening bracket is encountered?",
+          "options": [
+            "A. Pop the stack",
+            "B. Push it onto the stack",
+            "C. Ignore it",
+            "D. Reverse it"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 41,
+          "q": "What should happen if a closing bracket is found while the stack is empty?",
+          "options": [
+            "A. Return true",
+            "B. Return false",
+            "C. Push the closing bracket",
+            "D. Skip it"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 42,
+          "q": "For closing `]`, which opening bracket must be on top?",
+          "options": [
+            "A. `(`",
+            "B. `{`",
+            "C. `[`",
+            "D. `)`"
+          ],
+          "answer": "C"
+        },
+        {
+          "id": 43,
+          "q": "Why can an odd-length bracket string be rejected immediately?",
+          "options": [
+            "A. A valid bracket sequence requires pairs of characters",
+            "B. Stack cannot hold odd elements",
+            "C. Java does not support odd strings",
+            "D. Only even numbers are allowed"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 44,
+          "q": "What should be true after processing every character of a valid string?",
+          "options": [
+            "A. Stack contains one bracket",
+            "B. Stack is empty",
+            "C. Stack contains all brackets",
+            "D. Stack contains only closing brackets"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 45,
+          "q": "What is the time complexity of the stack-based Valid Parentheses solution?",
+          "options": [
+            "A. O(n)",
+            "B. O(n²)",
+            "C. O(log n)",
+            "D. O(1)"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 46,
+          "q": "What is the worst-case extra space?",
+          "options": [
+            "A. O(1)",
+            "B. O(log n)",
+            "C. O(n)",
+            "D. O(n²)"
+          ],
+          "answer": "C"
+        },
+        {
+          "id": 47,
+          "q": "Which string is valid?",
+          "options": [
+            "A. `([)]`",
+            "B. `({[]})`",
+            "C. `((]`",
+            "D. `[(])`"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 48,
+          "q": "In the Java implementation, what is a useful early optimization?",
+          "options": [
+            "A. Check `s.length() % 2 != 0`",
+            "B. Sort the string",
+            "C. Reverse the string",
+            "D. Remove all spaces"
+          ],
+          "answer": "A"
+        }
+      ]
+    },
+    {
+      "name": "Evaluate Reverse Polish Notation",
+      "questions": [
+        {
+          "id": 49,
+          "q": "In Reverse Polish Notation, where is the operator placed?",
+          "options": [
+            "A. Before operands",
+            "B. Between operands",
+            "C. After operands",
+            "D. At the beginning only"
+          ],
+          "answer": "C"
+        },
+        {
+          "id": 50,
+          "q": "What is the postfix form of `2 + 3`?",
+          "options": [
+            "A. `+ 2 3`",
+            "B. `2 3 +`",
+            "C. `2 + 3`",
+            "D. `3 2 +`"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 51,
+          "q": "Which data structure is used to evaluate RPN in the uploaded approach?",
+          "options": [
+            "A. Queue",
+            "B. Stack",
+            "C. Linked list only",
+            "D. Heap"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 52,
+          "q": "When a number token is encountered, what is done?",
+          "options": [
+            "A. Pop two values",
+            "B. Push it onto the stack",
+            "C. Ignore it",
+            "D. Divide it by the previous value"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 53,
+          "q": "When an operator is encountered, how many operands are normally popped?",
+          "options": [
+            "A. One",
+            "B. Two",
+            "C. Three",
+            "D. Zero"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 54,
+          "q": "If `b` is popped first and `a` second, how should subtraction be computed?",
+          "options": [
+            "A. `b - a`",
+            "B. `a - b`",
+            "C. `a + b`",
+            "D. `b / a`"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 55,
+          "q": "For division, why is operand order important?",
+          "options": [
+            "A. Division is commutative",
+            "B. Integer division depends on which value is the numerator",
+            "C. It changes stack size",
+            "D. It affects only addition"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 56,
+          "q": "What is the result of `[\"2\",\"1\",\"+\",\"3\",\"*\"]`?",
+          "options": [
+            "A. 5",
+            "B. 6",
+            "C. 9",
+            "D. 12"
+          ],
+          "answer": "C"
+        },
+        {
+          "id": 57,
+          "q": "What is the result of `[\"3\",\"4\",\"+\",\"2\",\"*\"]`?",
+          "options": [
+            "A. 9",
+            "B. 14",
+            "C. 16",
+            "D. 24"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 58,
+          "q": "What is the time complexity of evaluating an RPN expression with n tokens?",
+          "options": [
+            "A. O(1)",
+            "B. O(log n)",
+            "C. O(n)",
+            "D. O(n²)"
+          ],
+          "answer": "C"
+        },
+        {
+          "id": 59,
+          "q": "What is the worst-case auxiliary stack space?",
+          "options": [
+            "A. O(1)",
+            "B. O(n)",
+            "C. O(n²)",
+            "D. O(log n)"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 60,
+          "q": "Which operators are supported by the uploaded problem?",
+          "options": [
+            "A. `+`, `-`, `*`, `/`",
+            "B. `^`, `%` only",
+            "C. `+` only",
+            "D. All Java operators"
+          ],
+          "answer": "A"
+        }
+      ]
+    },
+    {
+      "name": "Valid Parentheses String",
+      "questions": [
+        {
+          "id": 61,
+          "q": "What special character makes this problem different from normal Valid Parentheses?",
+          "options": [
+            "A. `#`",
+            "B. `*`",
+            "C. `$`",
+            "D. `?`"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 62,
+          "q": "What can `*` represent?",
+          "options": [
+            "A. Only `(`",
+            "B. Only `)`",
+            "C. `(`, `)`, or an empty string",
+            "D. Only an empty string"
+          ],
+          "answer": "C"
+        },
+        {
+          "id": 63,
+          "q": "In the two-pass greedy method, what does the left-to-right pass primarily detect?",
+          "options": [
+            "A. Too many closing parentheses",
+            "B. Too many opening parentheses only",
+            "C. Duplicate stars",
+            "D. Numbers"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 64,
+          "q": "During the left-to-right pass, which characters increase the balance?",
+          "options": [
+            "A. Only `)`",
+            "B. `(` or `*`",
+            "C. Only `*`",
+            "D. `)` or `*`"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 65,
+          "q": "During the left-to-right pass, what happens when `balance < 0`?",
+          "options": [
+            "A. Continue",
+            "B. Return false",
+            "C. Reset to zero",
+            "D. Reverse the string"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 66,
+          "q": "Why is a right-to-left pass required?",
+          "options": [
+            "A. To detect too many unmatched opening parentheses",
+            "B. To sort the string",
+            "C. To remove stars",
+            "D. To count digits"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 67,
+          "q": "In the right-to-left pass, which characters increase balance?",
+          "options": [
+            "A. `(` only",
+            "B. `)` or `*`",
+            "C. `(` or `*`",
+            "D. Letters"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 68,
+          "q": "What is the time complexity of the two-pass greedy approach?",
+          "options": [
+            "A. O(n)",
+            "B. O(n²)",
+            "C. O(log n)",
+            "D. O(2ⁿ)"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 69,
+          "q": "What is the extra space of the two-pass greedy approach?",
+          "options": [
+            "A. O(n)",
+            "B. O(log n)",
+            "C. O(1)",
+            "D. O(n²)"
+          ],
+          "answer": "C"
+        },
+        {
+          "id": 70,
+          "q": "What is the main advantage of the greedy two-pass approach over the stack approach?",
+          "options": [
+            "A. It uses constant extra space",
+            "B. It sorts the string",
+            "C. It uses recursion",
+            "D. It changes `*` permanently"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 71,
+          "q": "In the stack-based approach, what do `openStack` and `starStack` store?",
+          "options": [
+            "A. Values",
+            "B. Indices of opening parentheses and stars",
+            "C. Only characters",
+            "D. Counts only"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 72,
+          "q": "Why must an unmatched `(` occur before the `*` used to match it in the stack approach?",
+          "options": [
+            "A. A star cannot represent a parenthesis before its position",
+            "B. All stars must be at the beginning",
+            "C. The stack is FIFO",
+            "D. It reduces time complexity"
+          ],
+          "answer": "A"
+        }
+      ]
+    },
+    {
+      "name": "Minimum Remove to Make Valid Parentheses",
+      "questions": [
+        {
+          "id": 73,
+          "q": "What is the objective of Minimum Remove to Make Valid Parentheses?",
+          "options": [
+            "A. Maximize the number of parentheses",
+            "B. Remove the minimum number of parentheses to make the string valid",
+            "C. Reverse all parentheses",
+            "D. Remove all letters"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 74,
+          "q": "What non-parenthesis characters are allowed in the problem?",
+          "options": [
+            "A. Uppercase letters only",
+            "B. Lowercase English letters",
+            "C. Digits only",
+            "D. Special symbols only"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 75,
+          "q": "What does `balance` represent during the first pass?",
+          "options": [
+            "A. Number of letters",
+            "B. Number of unmatched opening parentheses currently available",
+            "C. Number of closing parentheses",
+            "D. String length"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 76,
+          "q": "What should happen when a `)` is encountered and `balance == 0`?",
+          "options": [
+            "A. Append it",
+            "B. Skip/remove it",
+            "C. Push it",
+            "D. Convert it to `(`"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 77,
+          "q": "What happens to `balance` when a valid `(` is appended?",
+          "options": [
+            "A. Decreases",
+            "B. Increases",
+            "C. Stays the same",
+            "D. Becomes zero"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 78,
+          "q": "Why is a second reverse traversal needed?",
+          "options": [
+            "A. To remove unmatched `(` remaining after the first pass",
+            "B. To remove all letters",
+            "C. To sort parentheses",
+            "D. To count stars"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 79,
+          "q": "During the second pass, when is an opening `(` skipped?",
+          "options": [
+            "A. Whenever `balance == 0`",
+            "B. When `balance > 0`, because it is unmatched",
+            "C. Whenever it is the first character",
+            "D. Never"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 80,
+          "q": "Why is the second-pass result reversed at the end?",
+          "options": [
+            "A. Characters were appended while traversing from right to left",
+            "B. Parentheses need sorting",
+            "C. The first pass reversed them",
+            "D. It reduces memory"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 81,
+          "q": "What is the time complexity of the two-pass solution?",
+          "options": [
+            "A. O(n)",
+            "B. O(n²)",
+            "C. O(log n)",
+            "D. O(2ⁿ)"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 82,
+          "q": "What is the space complexity when building the result?",
+          "options": [
+            "A. O(1)",
+            "B. O(n)",
+            "C. O(log n)",
+            "D. O(n²)"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 83,
+          "q": "If the input is `\"a)b(c)d\"`, which character is immediately identified as invalid during the first pass?",
+          "options": [
+            "A. `a`",
+            "B. `)`",
+            "C. `(`",
+            "D. `d`"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 84,
+          "q": "Does the algorithm remove letters that are already valid?",
+          "options": [
+            "A. Yes",
+            "B. No",
+            "C. Only lowercase letters",
+            "D. Only letters after parentheses"
+          ],
+          "answer": "B"
+        }
+      ]
+    },
+    {
+      "name": "Longest Valid Parentheses",
+      "questions": [
+        {
+          "id": 85,
+          "q": "What does the Longest Valid Parentheses problem ask for?",
+          "options": [
+            "A. The longest valid subsequence",
+            "B. The length of the longest valid parentheses substring",
+            "C. The number of valid pairs",
+            "D. The shortest valid substring"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 86,
+          "q": "What does the stack store in the stack-based solution?",
+          "options": [
+            "A. Parenthesis characters only",
+            "B. Indices",
+            "C. Values of parentheses",
+            "D. Lengths only"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 87,
+          "q": "Why is `-1` pushed initially?",
+          "options": [
+            "A. It represents an invalid character",
+            "B. It acts as a base index for calculating lengths, especially when a valid substring starts at index 0",
+            "C. It stores the minimum value",
+            "D. It represents `)`"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 88,
+          "q": "What is done when `s[i] == '('`?",
+          "options": [
+            "A. Pop",
+            "B. Push index `i`",
+            "C. Reset stack",
+            "D. Update answer only"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 89,
+          "q": "What is done when `s[i] == ')'`?",
+          "options": [
+            "A. Push `i` immediately",
+            "B. Pop the stack first",
+            "C. Ignore it",
+            "D. Reverse the string"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 90,
+          "q": "After popping for a `)`, what happens if the stack becomes empty?",
+          "options": [
+            "A. Push current index as a new base",
+            "B. Return zero",
+            "C. Push `-1` again only",
+            "D. Stop the loop"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 91,
+          "q": "If the stack is not empty after popping a `)`, how is the current valid length calculated?",
+          "options": [
+            "A. `stack.peek() - i`",
+            "B. `i + stack.peek()`",
+            "C. `i - stack.peek()`",
+            "D. `i * stack.peek()`"
+          ],
+          "answer": "C"
+        },
+        {
+          "id": 92,
+          "q": "For input `\"()\"`, what is the longest valid length?",
+          "options": [
+            "A. 0",
+            "B. 1",
+            "C. 2",
+            "D. 3"
+          ],
+          "answer": "C"
+        },
+        {
+          "id": 93,
+          "q": "For input `\"(()\"`, what is the longest valid length?",
+          "options": [
+            "A. 0",
+            "B. 1",
+            "C. 2",
+            "D. 3"
+          ],
+          "answer": "C"
+        },
+        {
+          "id": 94,
+          "q": "What is the time complexity of the stack-based solution?",
+          "options": [
+            "A. O(n)",
+            "B. O(n²)",
+            "C. O(log n)",
+            "D. O(2ⁿ)"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 95,
+          "q": "What is the auxiliary space complexity?",
+          "options": [
+            "A. O(1)",
+            "B. O(n)",
+            "C. O(log n)",
+            "D. O(n²)"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 96,
+          "q": "Why is this problem specifically about a substring rather than a subsequence?",
+          "options": [
+            "A. Characters must form a contiguous valid region",
+            "B. Characters can be arbitrarily skipped",
+            "C. Sorting is allowed",
+            "D. Only the first and last characters matter"
+          ],
+          "answer": "A"
+        }
+      ]
+    },
+    {
+      "name": "Basic Calculator",
+      "questions": [
+        {
+          "id": 97,
+          "q": "Which operations are supported by the Basic Calculator problem?",
+          "options": [
+            "A. `+` and `-`",
+            "B. `*` and `/` only",
+            "C. `+`, `-`, `*`, `/`",
+            "D. `%` only"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 98,
+          "q": "What does `num = num * 10 + (ch - '0')` accomplish?",
+          "options": [
+            "A. Converts a multi-digit sequence into an integer",
+            "B. Reverses the number",
+            "C. Counts parentheses",
+            "D. Calculates the sign"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 99,
+          "q": "What is the initial value of `sign`?",
+          "options": [
+            "A. -1",
+            "B. 0",
+            "C. 1",
+            "D. 10"
+          ],
+          "answer": "C"
+        },
+        {
+          "id": 100,
+          "q": "What should happen when `+` is encountered?",
+          "options": [
+            "A. Add `sign * num` to result, reset `num`, and set `sign = 1`",
+            "B. Push the number only",
+            "C. Set `result = 0`",
+            "D. Pop twice"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 101,
+          "q": "What should happen when `-` is encountered?",
+          "options": [
+            "A. Set `sign = 1`",
+            "B. Add current signed number, reset `num`, and set `sign = -1`",
+            "C. Clear the stack",
+            "D. Reverse the expression"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 102,
+          "q": "Why is `num = 0` necessary after processing `+` or `-`?",
+          "options": [
+            "A. To avoid combining the previous number with the next number",
+            "B. To remove parentheses",
+            "C. To reset the stack",
+            "D. To change multiplication precedence"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 103,
+          "q": "What two values are pushed when `(` is encountered?",
+          "options": [
+            "A. `num` and `result`",
+            "B. `result` and `sign`",
+            "C. `sign` and `num`",
+            "D. `result` and `num`"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 104,
+          "q": "What is done when `(` is encountered after saving the previous context?",
+          "options": [
+            "A. `result = 0` and `sign = 1`",
+            "B. `result = -1`",
+            "C. `num = 10`",
+            "D. Pop the stack"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 105,
+          "q": "On encountering `)`, how is the current parenthesized expression combined with the outer expression?",
+          "options": [
+            "A. `stack.pop() + result` only",
+            "B. `stack.pop() * result + stack.pop()`",
+            "C. `result * result`",
+            "D. `stack.peek() - result`"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 106,
+          "q": "What is the result of `\"1 + 2 - 4\"`?",
+          "options": [
+            "A. 7",
+            "B. -1",
+            "C. 1",
+            "D. -5"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 107,
+          "q": "What is the result of `\"2 - (1 + 2)\"`?",
+          "options": [
+            "A. 3",
+            "B. 1",
+            "C. -1",
+            "D. -3"
+          ],
+          "answer": "C"
+        },
+        {
+          "id": 108,
+          "q": "What is the purpose of `Character.isDigit(ch)`?",
+          "options": [
+            "A. Detect parentheses",
+            "B. Detect whether the current character is a digit",
+            "C. Detect whitespace only",
+            "D. Detect an operator"
+          ],
+          "answer": "B"
+        }
+      ]
+    },
+    {
+      "name": "Validate Stack Sequences",
+      "questions": [
+        {
+          "id": 109,
+          "q": "What does Validate Stack Sequences determine?",
+          "options": [
+            "A. Whether two arrays are sorted",
+            "B. Whether `popped` can be a valid pop order for `pushed`",
+            "C. Whether arrays contain duplicates",
+            "D. Whether values are consecutive"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 110,
+          "q": "What order must elements be pushed in?",
+          "options": [
+            "A. Any order",
+            "B. Reverse of `pushed`",
+            "C. Exactly the order given by `pushed`",
+            "D. Sorted order"
+          ],
+          "answer": "C"
+        },
+        {
+          "id": 111,
+          "q": "What principle determines valid popping?",
+          "options": [
+            "A. FIFO",
+            "B. LIFO",
+            "C. Random access",
+            "D. Priority order"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 112,
+          "q": "What should be checked after each push?",
+          "options": [
+            "A. Whether stack size is prime",
+            "B. Whether stack top equals the next required element in `popped`",
+            "C. Whether the current element is smallest",
+            "D. Whether the queue is empty"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 113,
+          "q": "If the stack top matches `popped[i]`, what should happen?",
+          "options": [
+            "A. Pop and increment `i`",
+            "B. Push again",
+            "C. Ignore the match",
+            "D. Clear the stack"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 114,
+          "q": "Why can the pop check be repeated in a `while` loop?",
+          "options": [
+            "A. Several consecutive top elements may match the next required popped elements",
+            "B. Stack operations are FIFO",
+            "C. It sorts the sequence",
+            "D. It avoids pushing"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 115,
+          "q": "When is the popped sequence valid after all pushes?",
+          "options": [
+            "A. When the stack is empty",
+            "B. When the stack contains one element",
+            "C. When `popped` is sorted",
+            "D. When `pushed` is reversed"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 116,
+          "q": "If `pushed = [1,2,3,4,5]` and `popped = [4,5,3,2,1]`, is the sequence valid?",
+          "options": [
+            "A. Yes",
+            "B. No",
+            "C. Only if duplicates exist",
+            "D. Cannot determine"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 117,
+          "q": "What data structure directly simulates the required behavior?",
+          "options": [
+            "A. Queue",
+            "B. Stack",
+            "C. Heap",
+            "D. HashMap"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 118,
+          "q": "What is the time complexity of the simulation?",
+          "options": [
+            "A. O(n)",
+            "B. O(n²)",
+            "C. O(log n)",
+            "D. O(2ⁿ)"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 119,
+          "q": "What is the worst-case auxiliary space?",
+          "options": [
+            "A. O(1)",
+            "B. O(log n)",
+            "C. O(n)",
+            "D. O(n²)"
+          ],
+          "answer": "C"
+        },
+        {
+          "id": 120,
+          "q": "Why are distinct values mentioned in the problem?",
+          "options": [
+            "A. They remove ambiguity when matching the pushed and popped elements",
+            "B. They make the stack FIFO",
+            "C. They sort the arrays automatically",
+            "D. They eliminate the need for a stack"
+          ],
+          "answer": "A"
+        }
+      ]
+    },
+    {
+      "name": "Remove K Digits",
+      "questions": [
+        {
+          "id": 121,
+          "q": "What is the objective of Remove K Digits?",
+          "options": [
+            "A. Make the number as large as possible",
+            "B. Remove exactly `k` digits so the remaining number is as small as possible",
+            "C. Reverse the number",
+            "D. Sort all digits"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 122,
+          "q": "Which principle is used in the uploaded efficient solution?",
+          "options": [
+            "A. Monotonic stack / greedy removal",
+            "B. Binary search",
+            "C. BFS",
+            "D. Dynamic programming table"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 123,
+          "q": "When is the top digit removed during the main scan?",
+          "options": [
+            "A. When `k > 0`, stack is nonempty, and `stack.peek() > digit`",
+            "B. Whenever the current digit is even",
+            "C. Whenever `digit > stack.peek()`",
+            "D. Only when the stack is empty"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 124,
+          "q": "Why is a larger previous digit removed when a smaller current digit appears?",
+          "options": [
+            "A. Removing it can produce a smaller number at the more significant position",
+            "B. It increases the number",
+            "C. It sorts digits in descending order",
+            "D. It avoids using a stack"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 125,
+          "q": "What happens after the current digit is processed?",
+          "options": [
+            "A. It is always pushed after applicable removals",
+            "B. It is always discarded",
+            "C. It is inserted at the bottom",
+            "D. It is reversed"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 126,
+          "q": "Why is there a second `while(k > 0)` after scanning all digits?",
+          "options": [
+            "A. Some removals may remain when digits were already nondecreasing",
+            "B. It adds zeros",
+            "C. It reverses the stack",
+            "D. It detects parentheses"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 127,
+          "q": "For `\"12345\"` with `k = 2`, what is the result?",
+          "options": [
+            "A. 145",
+            "B. 123",
+            "C. 345",
+            "D. 125"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 128,
+          "q": "For `\"1432219\"` with `k = 3`, what is the expected result?",
+          "options": [
+            "A. 4329",
+            "B. 1219",
+            "C. 1229",
+            "D. 1321"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 129,
+          "q": "Why are leading zeros removed after constructing the result?",
+          "options": [
+            "A. The required final representation should not contain leading zeros unless the answer is zero",
+            "B. Zeros cannot be stored in a stack",
+            "C. It changes the number of digits removed",
+            "D. It sorts the result"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 130,
+          "q": "What should `\"0000\"` become after normalization?",
+          "options": [
+            "A. `\"0000\"`",
+            "B. `\"000\"`",
+            "C. `\"0\"`",
+            "D. `\"\"`"
+          ],
+          "answer": "C"
+        },
+        {
+          "id": 131,
+          "q": "What is the time complexity of the monotonic-stack solution?",
+          "options": [
+            "A. O(n²)",
+            "B. O(n)",
+            "C. O(log n)",
+            "D. O(2ⁿ)"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 132,
+          "q": "Why is the stack solution O(n) even though there is a `while` inside the loop?",
+          "options": [
+            "A. Each digit can be pushed and popped only a limited number of times",
+            "B. The inner loop never executes",
+            "C. Java optimizes every loop",
+            "D. The stack has constant size"
+          ],
+          "answer": "A"
+        }
+      ]
+    },
+    {
+      "name": "Implement Stack Using Queue",
+      "questions": [
+        {
+          "id": 133,
+          "q": "What behavior must be simulated?",
+          "options": [
+            "A. FIFO",
+            "B. LIFO",
+            "C. Priority queue behavior",
+            "D. Random access"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 134,
+          "q": "In the two-queue approach, what is the role of `q1`?",
+          "options": [
+            "A. It stores the current stack order",
+            "B. It stores only deleted values",
+            "C. It stores minimum values",
+            "D. It stores indexes"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 135,
+          "q": "What is the role of `q2`?",
+          "options": [
+            "A. Helper queue used during `push()`",
+            "B. Permanent storage only",
+            "C. Output queue",
+            "D. Priority queue"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 136,
+          "q": "Why does the two-queue approach move all elements from `q1` to `q2` during push?",
+          "options": [
+            "A. To place the new element at the front of `q1`",
+            "B. To sort the elements",
+            "C. To delete the old elements",
+            "D. To reverse both queues permanently"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 137,
+          "q": "After adding the new element to `q1`, what happens to elements in `q2`?",
+          "options": [
+            "A. They are discarded",
+            "B. They are moved back to `q1`",
+            "C. They are pushed into a stack",
+            "D. They are sorted"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 138,
+          "q": "Why can `pop()` be O(1) in this approach?",
+          "options": [
+            "A. The top stack element is maintained at the front of `q1`",
+            "B. Queues are LIFO",
+            "C. The queue automatically sorts",
+            "D. Two queues make all operations constant"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 139,
+          "q": "What is the time complexity of `push(x)` in the two-queue approach?",
+          "options": [
+            "A. O(1)",
+            "B. O(log n)",
+            "C. O(n)",
+            "D. O(n²)"
+          ],
+          "answer": "C"
+        },
+        {
+          "id": 140,
+          "q": "What is the time complexity of `pop()` in the described two-queue approach?",
+          "options": [
+            "A. O(n)",
+            "B. O(1)",
+            "C. O(log n)",
+            "D. O(n²)"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 141,
+          "q": "Which alternative has O(1) push and O(n) pop?",
+          "options": [
+            "A. Pop-costly two-queue approach",
+            "B. The described push-costly approach",
+            "C. One queue with rotation",
+            "D. Minimum stack"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 142,
+          "q": "Which one-queue approach can achieve O(n) push and O(1) pop?",
+          "options": [
+            "A. Rotate the queue after insertion",
+            "B. Sort the queue",
+            "C. Reverse the queue after pop",
+            "D. Use a heap"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 143,
+          "q": "What is the main trade-off of the described implementation?",
+          "options": [
+            "A. Push is expensive, pop is cheap",
+            "B. Push is cheap, pop is expensive",
+            "C. Both are O(n²)",
+            "D. Both require sorting"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 144,
+          "q": "What happens if `pop()` is called when `q1` is empty in the uploaded implementation?",
+          "options": [
+            "A. It returns `-1`",
+            "B. It inserts zero",
+            "C. It returns 0",
+            "D. It reverses q2"
+          ],
+          "answer": "A"
+        }
+      ]
+    },
+    {
+      "name": "Implement Queue Using Stacks",
+      "questions": [
+        {
+          "id": 145,
+          "q": "What behavior must be simulated?",
+          "options": [
+            "A. LIFO",
+            "B. FIFO",
+            "C. Priority order",
+            "D. Sorted order"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 146,
+          "q": "What are the two stacks called in the uploaded implementation?",
+          "options": [
+            "A. `q1` and `q2`",
+            "B. `stackIn` and `stackOut`",
+            "C. `front` and `rear`",
+            "D. `pushStack` and `popQueue`"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 147,
+          "q": "What does `stackIn` primarily handle?",
+          "options": [
+            "A. Incoming elements",
+            "B. Only removed elements",
+            "C. Minimum values",
+            "D. Parentheses"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 148,
+          "q": "What does `stackOut` provide?",
+          "options": [
+            "A. The front of the simulated queue when nonempty",
+            "B. The largest element",
+            "C. The newest element only",
+            "D. A sorted sequence"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 149,
+          "q": "What happens during `push(x)`?",
+          "options": [
+            "A. Push directly into `stackIn`",
+            "B. Move everything to `stackOut`",
+            "C. Pop from `stackIn`",
+            "D. Sort both stacks"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 150,
+          "q": "When does `pop()` transfer elements from `stackIn` to `stackOut`?",
+          "options": [
+            "A. Every time",
+            "B. Only when `stackOut` is empty",
+            "C. Only when `stackIn` is empty",
+            "D. Never"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 151,
+          "q": "Why does moving elements from `stackIn` to `stackOut` create FIFO behavior?",
+          "options": [
+            "A. The reversal makes the oldest inserted element appear on top of `stackOut`",
+            "B. It sorts the elements",
+            "C. It deletes the newest element",
+            "D. StackOut is actually a queue"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 152,
+          "q": "What does `peek()` do when `stackOut` is empty?",
+          "options": [
+            "A. Transfers `stackIn` to `stackOut`, then returns `stackOut.peek()`",
+            "B. Returns `stackIn.peek()` directly",
+            "C. Clears both stacks",
+            "D. Returns -1 without checking"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 153,
+          "q": "What is the time complexity of `push()`?",
+          "options": [
+            "A. O(1)",
+            "B. O(n)",
+            "C. O(log n)",
+            "D. O(n²)"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 154,
+          "q": "What is the amortized time complexity of `pop()` and `peek()`?",
+          "options": [
+            "A. O(n²)",
+            "B. O(log n)",
+            "C. O(1) amortized",
+            "D. O(n) amortized"
+          ],
+          "answer": "C"
+        },
+        {
+          "id": 155,
+          "q": "What is the worst-case time of one `pop()`?",
+          "options": [
+            "A. O(1) always",
+            "B. O(n), when all elements must be transferred",
+            "C. O(log n)",
+            "D. O(n²)"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 156,
+          "q": "What is the space complexity of the two-stack queue implementation?",
+          "options": [
+            "A. O(1)",
+            "B. O(log n)",
+            "C. O(n)",
+            "D. O(n²)"
+          ],
+          "answer": "C"
+        },
+        {
+          "id": 157,
+          "q": "What does `empty()` return?",
+          "options": [
+            "A. `stackIn.isEmpty() || stackOut.isEmpty()`",
+            "B. `stackIn.isEmpty() && stackOut.isEmpty()`",
+            "C. `stackIn.size() == stackOut.size()`",
+            "D. `stackOut.isEmpty()` only"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 158,
+          "q": "If `stackIn = [1,2,3]` with 3 at the top and `stackOut` is empty, what will be the top of `stackOut` after transfer?",
+          "options": [
+            "A. 1",
+            "B. 2",
+            "C. 3",
+            "D. Empty"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 159,
+          "q": "Why is the transfer not repeated on every pop?",
+          "options": [
+            "A. Once elements are in `stackOut`, their order already supports FIFO removal",
+            "B. StackOut cannot be popped twice",
+            "C. It would make the queue sorted",
+            "D. Java forbids moving elements twice"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 160,
+          "q": "What is the key idea behind the two-stack queue?",
+          "options": [
+            "A. Two reversals restore FIFO order",
+            "B. Two stacks always behave as a queue",
+            "C. Elements are sorted before removal",
+            "D. The newest element is removed first"
+          ],
+          "answer": "A"
+        }
+      ]
+    },
+    {
+      "name": "Mixed / Code-Tracing MCQs",
+      "questions": [
+        {
+          "id": 161,
+          "q": "Which problem directly uses a monotonic-stack idea to minimize a numerical value?",
+          "options": [
+            "A. Valid Parentheses",
+            "B. Remove K Digits",
+            "C. Basic Calculator",
+            "D. Validate Stack Sequences"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 162,
+          "q": "Which problem uses `-1` as an initial stack index?",
+          "options": [
+            "A. Valid Parentheses",
+            "B. Longest Valid Parentheses",
+            "C. Remove K Digits",
+            "D. Minimum Stack"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 163,
+          "q": "Which problem uses two stacks specifically to simulate FIFO behavior?",
+          "options": [
+            "A. Stack Using Queue",
+            "B. Queue Using Stacks",
+            "C. Minimum Stack",
+            "D. RPN"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 164,
+          "q": "Which problem uses two queues to simulate LIFO behavior in the described efficient approach?",
+          "options": [
+            "A. Queue Using Stacks",
+            "B. Stack Using Queue",
+            "C. RPN",
+            "D. Basic Calculator"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 165,
+          "q": "Which problem uses an auxiliary structure to retrieve a minimum in O(1)?",
+          "options": [
+            "A. Minimum Stack",
+            "B. Partition List",
+            "C. Longest Valid Parentheses",
+            "D. Remove K Digits"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 166,
+          "q": "Which problem requires preserving relative order within two partitions?",
+          "options": [
+            "A. Partition List",
+            "B. Validate Stack Sequences",
+            "C. RPN",
+            "D. Basic Calculator"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 167,
+          "q": "Which problem uses `carry`?",
+          "options": [
+            "A. Add Two Numbers",
+            "B. Remove K Digits",
+            "C. Basic Calculator",
+            "D. Minimum Stack"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 168,
+          "q": "Which problem evaluates operators after their operands?",
+          "options": [
+            "A. Basic Calculator",
+            "B. RPN",
+            "C. Valid Parentheses",
+            "D. Partition List"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 169,
+          "q": "Which problem has a wildcard `*` that can act as `(`, `)`, or empty?",
+          "options": [
+            "A. Valid Parentheses",
+            "B. Valid Parentheses String",
+            "C. Minimum Remove to Make Valid Parentheses",
+            "D. Basic Calculator"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 170,
+          "q": "Which problem specifically asks for the minimum number of parentheses to remove?",
+          "options": [
+            "A. Longest Valid Parentheses",
+            "B. Minimum Remove to Make Valid Parentheses",
+            "C. Valid Parentheses String",
+            "D. Valid Parentheses"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 171,
+          "q": "Which problem asks for the length rather than the actual valid substring?",
+          "options": [
+            "A. Longest Valid Parentheses",
+            "B. Minimum Remove to Make Valid Parentheses",
+            "C. Partition List",
+            "D. Remove K Digits"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 172,
+          "q": "Which problem verifies whether one sequence could be produced as a stack's pop sequence?",
+          "options": [
+            "A. Validate Stack Sequences",
+            "B. Queue Using Stacks",
+            "C. RPN",
+            "D. Add Two Numbers"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 173,
+          "q": "Which algorithm relies on `result`, `sign`, and `num`?",
+          "options": [
+            "A. Basic Calculator",
+            "B. Remove K Digits",
+            "C. Minimum Stack",
+            "D. Partition List"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 174,
+          "q": "Which operation is O(n) in the described two-queue Stack implementation?",
+          "options": [
+            "A. pop",
+            "B. push",
+            "C. top if implemented as front",
+            "D. empty"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 175,
+          "q": "Which operation is O(1) in the described Queue-using-Stacks implementation?",
+          "options": [
+            "A. push",
+            "B. Worst-case pop",
+            "C. Transfer",
+            "D. Reversing all elements"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 176,
+          "q": "Which concept is common to Valid Parentheses and Validate Stack Sequences?",
+          "options": [
+            "A. Both simulate LIFO behavior",
+            "B. Both use queues only",
+            "C. Both use linked lists only",
+            "D. Both require sorting"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 177,
+          "q": "Which problem's two-pass greedy solution can use O(1) extra space?",
+          "options": [
+            "A. Valid Parentheses String",
+            "B. RPN",
+            "C. Minimum Stack",
+            "D. Longest Valid Parentheses stack approach"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 178,
+          "q": "Which problem's output can be `\"0\"` after removing leading zeros?",
+          "options": [
+            "A. Remove K Digits",
+            "B. RPN",
+            "C. Basic Calculator",
+            "D. Minimum Stack"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 179,
+          "q": "Which problem requires connecting a smaller list to a greater/equal list?",
+          "options": [
+            "A. Partition List",
+            "B. Add Two Numbers",
+            "C. Queue Using Stacks",
+            "D. RPN"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 180,
+          "q": "Which problem can require a final node because of an unused carry?",
+          "options": [
+            "A. Add Two Numbers",
+            "B. Partition List",
+            "C. Remove K Digits",
+            "D. Basic Calculator"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 181,
+          "q": "Which problem uses indices rather than characters in its stack?",
+          "options": [
+            "A. Longest Valid Parentheses",
+            "B. Valid Parentheses",
+            "C. RPN",
+            "D. Minimum Stack"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 182,
+          "q": "Which problem's main stack stores characters?",
+          "options": [
+            "A. Remove K Digits",
+            "B. Validate Stack Sequences",
+            "C. Longest Valid Parentheses",
+            "D. Queue Using Stacks"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 183,
+          "q": "Which problem's stack stores integer indices in its stack-based wildcard approach?",
+          "options": [
+            "A. Valid Parentheses String",
+            "B. RPN",
+            "C. Basic Calculator",
+            "D. Minimum Stack"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 184,
+          "q": "Which problem can use a `StringBuilder` to construct the final answer after scanning?",
+          "options": [
+            "A. Minimum Remove to Make Valid Parentheses",
+            "B. Validate Stack Sequences",
+            "C. Minimum Stack",
+            "D. Add Two Numbers"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 185,
+          "q": "Which problem's algorithm checks the next required popped element repeatedly while the stack top matches?",
+          "options": [
+            "A. Validate Stack Sequences",
+            "B. RPN",
+            "C. Basic Calculator",
+            "D. Partition List"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 186,
+          "q": "Which operation in Minimum Stack should remain O(1) even when the stack contains 100,000 elements?",
+          "options": [
+            "A. `getMin()`",
+            "B. Searching for a value",
+            "C. Sorting",
+            "D. Printing all elements"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 187,
+          "q": "In RPN, if the stack contains `a` below `b`, which values are used for `a - b`?",
+          "options": [
+            "A. Pop `a` first, then `b`",
+            "B. Pop `b` first, then `a`",
+            "C. Only pop `a`",
+            "D. Only pop `b`"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 188,
+          "q": "In Basic Calculator, why are both the previous result and sign stored at `(`?",
+          "options": [
+            "A. To restore the outer expression after calculating the inner expression",
+            "B. To calculate multiplication",
+            "C. To remove spaces",
+            "D. To detect digits"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 189,
+          "q": "What general principle explains why each element in Queue Using Stacks is transferred at most once before being popped?",
+          "options": [
+            "A. Once transferred to `stackOut`, it remains there until removed unless new transfer is needed",
+            "B. Stacks cannot be transferred twice",
+            "C. Queue operations are always O(1)",
+            "D. The elements are sorted"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 190,
+          "q": "Which problem is fundamentally a stable partition rather than a sorting problem?",
+          "options": [
+            "A. Partition List",
+            "B. Remove K Digits",
+            "C. RPN",
+            "D. Minimum Stack"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 191,
+          "q": "If a stack-based algorithm pushes every input character at most once and pops each at most once, what is the typical total time complexity?",
+          "options": [
+            "A. O(n)",
+            "B. O(n²)",
+            "C. O(log n)",
+            "D. O(2ⁿ)"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 192,
+          "q": "Which operation follows FIFO by using a reversal of two LIFO structures?",
+          "options": [
+            "A. Queue Using Stacks",
+            "B. Stack Using Queue",
+            "C. Minimum Stack",
+            "D. Valid Parentheses"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 193,
+          "q": "Which operation follows LIFO by rearranging queue elements so the newest element reaches the front?",
+          "options": [
+            "A. Stack Using Queue",
+            "B. Queue Using Stacks",
+            "C. Add Two Numbers",
+            "D. RPN"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 194,
+          "q": "Which problem's efficient solution avoids changing the values stored in the original linked-list nodes?",
+          "options": [
+            "A. Partition List",
+            "B. RPN",
+            "C. Minimum Stack",
+            "D. Basic Calculator"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 195,
+          "q": "Which problem specifically has a constraint that `pop()`, `top()`, and `getMin()` are called on a non-empty stack?",
+          "options": [
+            "A. Minimum Stack",
+            "B. Valid Parentheses",
+            "C. Remove K Digits",
+            "D. Partition List"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 196,
+          "q": "Which expression demonstrates nested parentheses handling in Basic Calculator?",
+          "options": [
+            "A. `1 + 2`",
+            "B. `2 - (1 + 2)`",
+            "C. `123`",
+            "D. `7`"
+          ],
+          "answer": "B"
+        },
+        {
+          "id": 197,
+          "q": "Which problem can reject a candidate immediately when its balance becomes negative in a left-to-right scan?",
+          "options": [
+            "A. Valid Parentheses String",
+            "B. Add Two Numbers",
+            "C. Partition List",
+            "D. RPN"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 198,
+          "q": "Which problem requires both left-to-right and right-to-left reasoning in its greedy solution?",
+          "options": [
+            "A. Valid Parentheses String",
+            "B. Minimum Stack",
+            "C. Validate Stack Sequences",
+            "D. RPN"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 199,
+          "q": "Which problem's stack base changes to the current index when an unmatched closing parenthesis is found?",
+          "options": [
+            "A. Longest Valid Parentheses",
+            "B. Valid Parentheses",
+            "C. Minimum Remove to Make Valid Parentheses",
+            "D. Basic Calculator"
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 200,
+          "q": "Which problem is best described as: “simulate one data structure using another while preserving its behavioral rule”?",
+          "options": [
+            "A. Stack Using Queue / Queue Using Stacks",
+            "B. Partition List",
+            "C. Add Two Numbers",
+            "D. Remove K Digits"
+          ],
+          "answer": "A"
+        }
+      ]
+    },
+    {
+      "name": "Quick Answer Index",
+      "questions": []
+    }
+  ]
+}
